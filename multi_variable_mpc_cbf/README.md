@@ -14,14 +14,19 @@ The project implements a unicycle model-based MPC controller that enables a vehi
 ![output](https://github.com/user-attachments/assets/941c877d-961f-454d-b6bd-b375705988c0)
 
 ---
+## Setup & Usage
+- run `install.bat`
+- run `run.bat`
+- run `clean.bat`
 
+---
 ## Features
-- Unicycle Dynamic Model: Implementation of a nonlinear vehicle motion model
-- Model Predictive Control: Receding horizon control strategy with constraints
-- JAX-based Linearization: Automatic differentiation for system linearization
-- Real-time Visualization: Display of vehicle trajectory and control signals
-- Constrained Control: Enforces realistic limits on steering angle and acceleration
-- Reference Tracking: Follows a circular trajectory with minimal error
+- **Unicycle Dynamic Model**: Implementation of a nonlinear vehicle motion model
+- **Model Predictive Control**: Receding horizon control strategy with constraints
+- **JAX-based Linearization**: Automatic differentiation for system linearization
+- **Real-time Visualization**: Display of vehicle trajectory and control signals
+- **Constrained Control**: Enforces realistic limits on steering angle and acceleration
+- **Reference Tracking**: Follows a circular trajectory with minimal error
 
 ---
 
@@ -32,15 +37,29 @@ The project implements a unicycle model-based MPC controller that enables a vehi
 - `matplotlib`==3.7.1
 - `imageio`==2.31.1
 
-
 ---
+## Technical Background
+### Model Predictive Control (MPC)
 
-## Setup & Usage
-- run `install.bat`
-- run `run.bat`
-- run `clean.bat`
+MPC is an advanced control strategy that uses a model of the system to predict future behavior and optimize control inputs over a finite time horizon. At each time step:
 
----
+1. The current state is measured
+
+2. An optimization problem is solved to find the optimal control sequence
+
+3. The first control input is applied
+
+4. The process repeats with the new state
+
+### Vehicle Dynamics
+
+The project uses a unicycle model for the vehicle dynamics:
+
+- State variables: position (x, y), orientation (θ), velocity (v)
+
+- Control inputs: steering angle (ω), acceleration (a)
+
+- Nonlinear dynamics are linearized at each time step using automatic differentiation
 
 ## System Architecture
 
@@ -54,23 +73,17 @@ The project implements a unicycle model-based MPC controller that enables a vehi
 | Prediction Horizon     | 10 steps        |
 
 ### Core Components
-1. **Trajectory Generation**  
-Circular reference path using:
-`trajX = 10 * np.cos(2πt)`
-`trajY = 10 * np.sin(2πt)`
-
-2. **Unicycle Dynamics**  
+1. **Unicycle Dynamics**  
 Continuous-time model:
-`ẋ = vcos(θ)`
-`ẏ = vsin(θ)`
-`θ̇ = ω`
-`v̇ = a`
+- `ẋ = vcos(θ)`
+- `ẏ = vsin(θ)`
+- `θ̇ = ω`
+- `v̇ = a`
 
-3. **MPC Optimization**  
+2. **MPC Optimization**  
 Convex optimization with CVXPY:
-`problem = cp.Problem(cp.Minimize(objective), constraints)`
-`problem.solve()`
-
+- `problem = cp.Problem(cp.Minimize(objective), constraints)`
+- `problem.solve()`
 
 ---
 
@@ -82,7 +95,15 @@ The simulation generates an animated GIF showing:
 - Control inputs (steering/acceleration)
 - Annular navigation region
 
+### Results
 
+The simulation produces visualizations showing:
+
+- Left panel: Vehicle position (red dot), predicted trajectory (red line), and target points (blue dots) on a circular track
+
+- Right panel: Control inputs (steering angle and acceleration) over the prediction horizon
+
+The animation shows the vehicle successfully navigating the circular track while maintaining appropriate control actions.
 
 ---
 
