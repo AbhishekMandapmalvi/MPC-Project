@@ -1,6 +1,6 @@
 # Model Predictive Control with Control Barrier Functions
 
-This repository contains an implementation of **Model Predictive Control (MPC)** with **Control Barrier Functions (CBFs)** for autonomous vehicle navigation in constrained environments. The simulation demonstrates how a car-like robot can navigate through an annular region while avoiding obstacles.
+This project implements a Model Predictive Control (MPC) system for autonomous vehicle control, demonstrating how a vehicle can follow a predefined circular trajectory. The simulation shows real-time optimization of steering angle and acceleration while visualizing both the vehicle's position and control inputs.
 
 ---
 
