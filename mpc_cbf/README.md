@@ -87,9 +87,9 @@ The visualization shows:
 ---
 
 ## Setup & Usage
-run `install.bat`
-run `run.bat`
-run `clean.bat`
+- run `install.bat`
+- run `run.bat`
+- run `clean.bat`
 
 ## Acknowledgments
 
