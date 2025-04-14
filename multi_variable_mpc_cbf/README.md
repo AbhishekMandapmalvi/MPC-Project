@@ -16,12 +16,12 @@ The project implements a unicycle model-based MPC controller that enables a vehi
 ---
 
 ## Features
-
-- **Unicycle Kinematics Model** with steering/velocity control
-- **MPC with 10-Step Prediction Horizon**
-- **Safety Constraints** via Control Barrier Functions
-- **Dynamic Visualization** of planning and execution
-- **Cross-Platform Compatibility** (Windows/Linux/Mac)
+    - Unicycle Dynamic Model: Implementation of a nonlinear vehicle motion model
+    - Model Predictive Control: Receding horizon control strategy with constraints
+    - JAX-based Linearization: Automatic differentiation for system linearization
+    - Real-time Visualization: Display of vehicle trajectory and control signals
+    - Constrained Control: Enforces realistic limits on steering angle and acceleration
+    - Reference Tracking: Follows a circular trajectory with minimal error
 
 ---
 
