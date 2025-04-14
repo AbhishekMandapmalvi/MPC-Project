@@ -10,9 +10,8 @@ The project implements a unicycle model-based MPC controller that enables a vehi
 
 - **Model Predictive Control** for optimal trajectory planning
 - **Control Barrier Functions** for safety guarantees
-- **Dynamic Obstacle Avoidance** in constrained environments
 
-![Trajectory Visualization](https://github.com/user-attachments/assets/2b4f6df4-4a76-4312-8177-37677549994c)
+![output](https://github.com/user-attachments/assets/941c877d-961f-454d-b6bd-b375705988c0)
 
 ---
 
