@@ -27,42 +27,19 @@ The project implements a unicycle model-based MPC controller that enables a vehi
 ---
 
 ## Requirements
-`Python` 3.8+ with:
-`jax`==0.4.13
-`cvxpy`==1.3.2
-`matplotlib`==3.7.1
-`imageio`==2.31.1
+- `Python` 3.8+ with:
+- `jax`==0.4.13
+- `cvxpy`==1.3.2
+- `matplotlib`==3.7.1
+- `imageio`==2.31.1
 
 
 ---
 
 ## Setup & Usage
-#### Create and activate virtual environment
-
-`python -m venv venv`
-`source venv/bin/activate` # Linux/Mac
-`.\venv\Scripts\activate` # Windows
-
-#### Build package (requires build tool)
-`python -m pip install --upgrade build`
-`cd mpc_cbf`
-`python -m build`
-
-#### Install built package
-`pip install dist/multi_variable_mpc_cbf-0.1.0-py3-none-any.whl`
-
-#### Upgrade essential tools
-`python -m pip install --upgrade pip setuptools`
-
-#### Install package dependencies
-`pip install -e .`
-
-#### Run the simulation
-`python run.py`
-
-#### Deactivate environment when finished
-`deactivate`
-
+- run `install.bat`
+- run `run.bat`
+- run `clean.bat`
 
 ---
 
