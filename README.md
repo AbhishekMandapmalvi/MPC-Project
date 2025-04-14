@@ -3,10 +3,14 @@
 ## Overview
 This repository contains two implementations of Model Predictive Control (MPC) for autonomous vehicle trajectory tracking:
 
-1. **Single-Variable MPC with Control Barrier Functions (CBFs)** - Navigates through an annular region while avoiding obstacles using only steering angle control.
-2. **Full MPC Controller** - Uses both steering angle and acceleration control to follow circular trajectories.
+<div align="center">
+  
+| **Single-Variable MPC with CBFs** <br> Navigates through an annular region while avoiding obstacles using only steering angle control. | **Full MPC Controller** <br> Uses both steering angle and acceleration control to follow circular trajectories. |
+|-------------------------------|---------------------|
+| <img src="https://github.com/user-attachments/assets/2b4f6df4-4a76-4312-8177-37677549994c" alt="Single Variable MPC" width="300"> | <img src="https://github.com/user-attachments/assets/941c877d-961f-454d-b6bd-b375705988c0" alt="Full MPC" width="600"> |
 
-![Simulation Output](https://github.com/user-attachments/assets/941c877d-961f-454d-b6bd-b375705988c0)
+</div>
+
 
 ## Features
 
