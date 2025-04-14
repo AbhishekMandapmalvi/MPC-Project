@@ -94,3 +94,6 @@ The visualization shows:
 ## Acknowledgments
 
 This implementation demonstrates how **Model Predictive Control** combined with **Control Barrier Functions** can enable safe autonomous navigation in constrained environments, a technique increasingly important in robotics and autonomous systems.
+
+## License
+MIT License - Free for academic and research use. Commercial use requires permission.
