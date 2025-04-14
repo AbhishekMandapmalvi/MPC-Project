@@ -87,31 +87,9 @@ The visualization shows:
 ---
 
 ## Setup & Usage
-#### Create and activate virtual environment
-
-`python -m venv venv`
-`source venv/bin/activate` # Linux/Mac
-`.\venv\Scripts\activate` # Windows
-
-#### Build package (requires build tool)
-`python -m pip install --upgrade build`
-`cd mpc_cbf`
-`python -m build`
-
-#### Install built package
-`pip install dist/mpc_cbf-0.1.0-py3-none-any.whl`
-
-#### Upgrade essential tools
-`python -m pip install --upgrade pip setuptools`
-
-#### Install package dependencies
-`pip install -e .`
-
-#### Run the simulation
-`python run.py`
-
-#### Deactivate environment when finished
-`deactivate`
+run `install.bat`
+run `run.bat`
+run `clean.bat`
 
 ## Acknowledgments
 
